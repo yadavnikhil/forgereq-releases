@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ForgeReq</title>
+    <meta name="description" content="ForgeReq Privacy Policy. We don't track you. Period.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-mono/style.css">
+    <style>
+        /* Reusing the same styles from index.html for consistency */
+        :root {
+            --bg-color: #111111;
+            --glass-bg: rgba(24, 24, 27, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --text-main: #ededed;
+            --text-muted: #888888;
+            --accent: #ededed;
+            --accent-glow: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Geist Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at center, #18181b 0%, #111111 100%);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Geist Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(5,5,5,0.9), transparent);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Geist Sans', sans-serif;
+            letter-spacing: -0.02em;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .policy-container {
+            max-width: 800px;
+            margin: 120px auto 80px auto;
+            padding: 4rem;
+        }
+
+        .policy-container h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-container .updated {
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 0.9rem;
+        }
+
+        .policy-container h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .policy-container p {
+            margin-bottom: 1.5rem;
+            color: #d1d5db;
+        }
+
+        .policy-container ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #d1d5db;
+        }
+
+        .policy-container li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            padding: 4rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .policy-container {
+                margin: 100px 20px 40px 20px;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="starfield"></canvas>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="ForgeReq Logo">
+            ForgeReq
+        </a>
+        <div class="nav-links">
+            <a href="index.html#guide">Features</a>
+            <a href="https://github.com/yadavnikhil/forgereq-releases" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <main class="glass-panel policy-container">
+        <h1>Privacy Policy</h1>
+        <div class="updated">Last Updated: May 17, 2026</div>
+
+        <h2>1. Zero Telemetry, Zero Tracking</h2>
+        <p>ForgeReq is a privacy-first, local-only REST API workbench. We believe that your data, API endpoints, credentials, and usage patterns are strictly your business. Therefore, ForgeReq does not include any telemetry, analytics, or tracking software.</p>
+
+        <h2>2. Local Data Storage & Encryption</h2>
+        <p>All data generated or stored by ForgeReq resides exclusively on your local machine:</p>
+        <ul>
+            <li>Your endpoints, variables, and history are stored locally in an encrypted vault.</li>
+            <li>The AES-256-GCM encryption key is securely managed by your operating system's keychain (macOS Keychain, Windows Credential Vault, or Linux Secret Service/libsecret).</li>
+            <li>We do not sync, backup, or transmit your vault to any cloud service.</li>
+        </ul>
+
+        <h2>3. Network Communications</h2>
+        <p>The only network requests initiated by ForgeReq are the ones you explicitly configure and execute within the application (e.g., sending an HTTP request to an API you are testing). ForgeReq does not "phone home" to our servers for any reason.</p>
+
+        <h2>4. Open Source Transparency</h2>
+        <p>ForgeReq is open-source software licensed under the AGPL-3.0. You are encouraged to inspect our release repository on <a href="https://github.com/yadavnikhil/forgereq-releases" target="_blank" style="color: var(--accent);">GitHub</a> to verify releases and report issues.</p>
+
+        <h2>5. Changes to this Policy</h2>
+        <p>Because we do not collect any data, there is very little in this policy that can change. If we ever decide to introduce optional cloud features (which would be strictly opt-in), we will update this policy accordingly. Your local-first experience will remain unchanged.</p>
+        
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, please open an issue on our GitHub repository.</p>
+    </main>
+
+    <footer>
+        <p>ForgeReq is open-source software licensed under AGPL-3.0.</p>
+        <p>
+            <a href="https://github.com/yadavnikhil/forgereq-releases">GitHub Repository</a> • 
+            <a href="index.html">Home</a>
+        </p>
+    </footer>
+
+    <!-- Universe Animation Script (same as index.html) -->
+    <script>
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let stars = [];
+        let mouseX = 0;
+        let mouseY = 0;
+        let targetMouseX = 0;
+        let targetMouseY = 0;
+
+        const STAR_COUNT = 800;
+        const SHOOTING_STAR_FREQ = 0.02;
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            initStars();
+        }
+
+        class Star {
+            constructor() {
+                this.reset(true);
+            }
+
+            reset(initial = false) {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.z = Math.random() * 2;
+                this.size = Math.random() * 1.5 + 0.1;
+                this.baseAlpha = Math.random() * 0.5 + 0.1;
+                this.pulse = Math.random() * Math.PI * 2;
+                this.pulseSpeed = Math.random() * 0.02 + 0.005;
+                this.depth = Math.random() * 0.5 + 0.1;
+
+                this.isShooting = !initial && Math.random() < SHOOTING_STAR_FREQ;
+                if (this.isShooting) {
+                    this.x = Math.random() * width;
+                    this.y = 0;
+                    this.size = Math.random() * 2 + 1;
+                    this.speedX = (Math.random() - 0.5) * 10;
+                    this.speedY = Math.random() * 10 + 5;
+                    this.life = 1.0;
+                }
+            }
+
+            update() {
+                if (this.isShooting) {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    this.life -= 0.02;
+                    if (this.life <= 0 || this.y > height || this.x < 0 || this.x > width) {
+                        this.reset();
+                    }
+                } else {
+                    this.pulse += this.pulseSpeed;
+                }
+            }
+
+            draw() {
+                let alpha = this.baseAlpha;
+                let drawX = this.x;
+                let drawY = this.y;
+
+                if (this.isShooting) {
+                    alpha = this.life;
+                    ctx.beginPath();
+                    ctx.moveTo(this.x, this.y);
+                    ctx.lineTo(this.x - this.speedX * 2, this.y - this.speedY * 2);
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+                    ctx.lineWidth = this.size;
+                    ctx.stroke();
+                } else {
+                    drawX += (mouseX - width/2) * this.depth * 0.05;
+                    drawY += (mouseY - height/2) * this.depth * 0.05;
+                    
+                    alpha = this.baseAlpha + Math.sin(this.pulse) * 0.2;
+                    if (alpha < 0) alpha = 0;
+                    
+                    ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+                    ctx.beginPath();
+                    ctx.arc(drawX, drawY, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+        }
+
+        function initStars() {
+            stars = [];
+            for (let i = 0; i < STAR_COUNT; i++) {
+                stars.push(new Star());
+            }
+        }
+
+        function animate() {
+            mouseX += (targetMouseX - mouseX) * 0.05;
+            mouseY += (targetMouseY - mouseY) * 0.05;
+
+            ctx.clearRect(0, 0, width, height);
+            
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        window.addEventListener('mousemove', (e) => {
+            targetMouseX = e.clientX;
+            targetMouseY = e.clientY;
+        });
+
+        targetMouseX = window.innerWidth / 2;
+        targetMouseY = window.innerHeight / 2;
+        mouseX = targetMouseX;
+        mouseY = targetMouseY;
+        
+        resize();
+        animate();
+    </script>
+</body>
+</html>
