@@ -56,6 +56,12 @@ export const pageMap = [{
       "sidebarTitle": "Load Testing"
     }
   }, {
+    name: "mcp",
+    route: "/guide/mcp",
+    frontMatter: {
+      "sidebarTitle": "Mcp"
+    }
+  }, {
     name: "mocking",
     route: "/guide/mocking",
     frontMatter: {

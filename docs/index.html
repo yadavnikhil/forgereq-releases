@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ForgeReq — Privacy-First Local REST · gRPC · Kafka · SOAP Workbench</title>
+    <title>ForgeReq — Privacy-First Local REST · gRPC · Kafka · SOAP · MCP Workbench</title>
     <meta name="description"
-        content="A privacy-first, local-only API workbench with first-class HTTP, gRPC, Kafka, and SOAP support. Encrypted vault, request chaining, load testing, mock servers, and a built-in AI Assistant. Forge requests. Keep your secrets at home.">
+        content="A privacy-first, local-only API workbench with first-class HTTP, gRPC, Kafka, SOAP, and MCP support. Encrypted vault, request chaining, load testing, mock servers, and a built-in AI Assistant. Forge requests. Keep your secrets at home.">
     <meta property="og:title" content="ForgeReq — Privacy-First Local API Workbench">
     <meta property="og:description"
-        content="HTTP · gRPC · Kafka · SOAP · Load testing · Mock servers · BYOK AI Assistant. Local-only. Encrypted vault. AGPL-3.0.">
+        content="HTTP · gRPC · Kafka · SOAP · MCP · Load testing · Mock servers · BYOK AI Assistant. Local-only. Encrypted vault. AGPL-3.0.">
     <meta property="og:type" content="website">
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/style.css">
@@ -394,7 +394,7 @@
         /* Protocols grid */
         .proto-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 1rem;
         }
 
@@ -905,7 +905,7 @@
             <!-- <span class="badge"><span class="dot"></span> Open Source · AGPL-3.0</span> -->
             <h1>The local-first<br>API workbench.</h1>
             <p class="lead" style="max-width: 600px; margin-bottom: 2rem;">
-                The ultimate workbench for <strong style="color:var(--text-main); font-weight:600;">HTTP, gRPC, Kafka, and SOAP</strong>. 
+                The ultimate workbench for <strong style="color:var(--text-main); font-weight:600;">HTTP, gRPC, Kafka, SOAP, and MCP</strong>. 
                 Everything stays on your machine inside an <strong style="color:var(--text-main); font-weight:600;">AES-256-GCM encrypted vault</strong>.
             </p>
 
@@ -998,8 +998,8 @@
     <!-- ─── PROTOCOLS ─── -->
     <section id="protocols" class="section">
         <div class="section-header">
-            <span class="eyebrow">Four protocols · one workspace</span>
-            <h2>HTTP · gRPC · Kafka · SOAP — all native</h2>
+            <span class="eyebrow">Five protocols · one workspace</span>
+            <h2>HTTP · gRPC · Kafka · SOAP · MCP — all native</h2>
             <p class="sub">ForgeReq isn't a thin wrapper around <code>curl</code>. Each protocol gets a first-class
                 builder, response viewer, and engine path, without any external tools or schema registries.</p>
         </div>
@@ -1050,8 +1050,19 @@
                     </svg>
                 </div>
                 <h4>SOAP</h4>
-                <p>Paste a WSDL URL, get auto-generated envelope templates pre-filled with namespaces and parameter
-                    placeholders.</p>
+                <p>Paste a WSDL URL, get auto-generated envelope templates pre-filled with namespaces and parameter placeholders.</p>
+            </div>
+            <div class="proto-card">
+                <div class="ico">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+                        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
+                        <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" />
+                    </svg>
+                </div>
+                <h4>MCP</h4>
+                <p>First-class Model Context Protocol client. Connect to any server with one-click OAuth 2.1 and DCR.</p>
             </div>
         </div>
     </section>
@@ -1252,6 +1263,20 @@
             </div>
         </div>
 
+        <!-- MCP -->
+        <div class="feature-block reveal">
+            <div class="feature-text">
+                <span class="kicker">Model Context Protocol</span>
+                <h3>First-class MCP client with Apps support.</h3>
+                <p>Connect to any MCP server via Streamable HTTP or SSE. Full support for Tools, Resources, Prompts, Sampling, and Elicitation.</p>
+                <p class="meta">Includes one-click OAuth 2.1 and Dynamic Client Registration. Test tools directly with the built-in AI assistant.</p>
+            </div>
+            <div class="feature-image">
+                <img src="screenshots/14-mcp.png" alt="MCP workspace"
+                    onerror="this.src='https://placehold.co/900x600/0a0a0b/444?text=MCP'">
+            </div>
+        </div>
+
         <!-- mTLS / Certificates -->
         <div class="feature-block reveal">
             <div class="feature-text">
@@ -1374,7 +1399,7 @@
     <!-- ─── FINAL CTA ─── -->
     <section class="final-cta">
         <h2>Forge requests. Keep your secrets at home.</h2>
-        <p>Free desktop app. macOS (Apple Silicon &amp; Intel), Windows, Linux (AppImage, deb, rpm).</p>
+        <p>Free, open source, AGPL-3.0. macOS (Apple Silicon &amp; Intel), Windows, Linux (AppImage, deb, rpm).</p>
         <div class="cta-group" style="margin-top: 2rem;">
             <a href="#" onclick="openDownloadModal(event)" class="btn btn-primary">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1392,7 +1417,7 @@
     </section>
 
     <footer>
-        <p>ForgeReq — Privacy-first local-only API testing client.</p>
+        <p>ForgeReq is open-source software licensed under AGPL-3.0.</p>
         <p>
             <a href="https://github.com/yadavnikhil/forgereq-releases" target="_blank" rel="noopener">GitHub</a> ·
             <a href="/guide">Documentation</a> ·
